@@ -1,0 +1,33 @@
+.ad{
+    background-color: $third-color;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    @media (min-width: $breakpoint-web){
+        height: 200px;
+        padding: 20px 30px;
+        font-size: 17px;
+       }
+    img{
+        object-fit: cover;
+        width: 40%;
+        height: 80%;
+        position: absolute;
+        right: 0px;
+        align-self: center;
+    }
+    &__info{
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        h2{
+            text-align: left;
+        }
+        a{
+            color: black;
+        }
+    }
+}

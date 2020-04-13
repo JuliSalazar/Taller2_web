@@ -1,26 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <link rel="stylesheet" href="/styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juli Salazar</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="shortcut icon" href="./src/images/logop.png">
 </head>
+
 <body>
-  
-  <p>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit asperiores consequuntur dolore nemo, omnis debitis perferendis perspiciatis nam accusamus voluptatibus iste minus aliquam, magni rerum distinctio sit molestias a numquam.
-  </p>
+    <header class="header" id="up">
+        <div class="header__logo">
+            <img src="./src/images/logop.png" alt="">
+        </div>
+        <div class="icon-menu">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+        <nav class="header__nav">
+            <a class="header__link" href="/">Inicio</a>
+            <a class="header__link" href="">Acerca de mí</a>
+            <a class="header__link" href="">Proyectos</a>
+            <a class="header__link" href="">Contacto</a>
+            <a class="header__link" href="/tienda">Tienda</a>
+            <a class="header__link" href="/carrito">Carrito</a>
+        </nav>
+    </header>
+    <main class="banner">
+        <div class="banner__info">
+            <h2>Conóceme</h2>
+            <p>Soy Julieth Salazar, una estudiante de Diseño de Medios Interactivos de la universidad Icesi</p>
+            <button class="button">
+                Más sobre mí
+            </button>
+        </div>
+    </main>
+    <section class="caracteristics">
+        <article class="caracteristics__article">
+            <img src="./src/images/sketch.png" alt="">
+            <h3>Behance</h3>
+            <p>En Behance se encuentran los trabajos realizados hasta el momento y todo el proceso que se llevó a cabo.<br>
+                <a href="https://www.behance.net/xxjulixx12df6e">Ir al enlace</a>
+            </p>
+        </article>
+        <article class="caracteristics__article">
+            <img src="./src/images/data.png" alt="">
+            <h3>Github</h3>
+            <p>En Github puedes encontrar los códigos realizados de programación sobre juegos o páginas web.<br>
+                    <a href="https://github.com/JuliSalazar">Ir al enlace</a>
+            </p>
+        </article>
+        <article class="caracteristics__article">
+            <img src="./src/images/videogame.png" alt="">
+            <h3>Juegos</h3>
+            <p>Puedes interactuar con los juegos que he realizado hasta ahora.<br>
+                    <a href="https://julisalazar.github.io/Juls-Game-">Ir al enlace</a>
+            </p>
+        </article>
 
-  <nav>
-    <a href="/contacto">Ir a página de contacto</a>
-    <a href="/portafolio">Ver portafolio</a>
-  </nav>
+    </section>
+    <section class="aptitudes">
+        <h2>Aptitudes</h2>
+        <p>Durante la carrera he desarrollado aptitudes en varios campos, entre ellos, el diseño gráfico, de experiencia y programación. </p>
+        <article class="aptitudes__article">
+            <div class="aptitudes__div">
+                <h3>Diseño</h3>
+                <p>Sobre diseño aprendí a usar Photoshop e Illustrator, sin embargo no me cierro a usar solo estos programas.
+                </p>
+                <img src="./src/images/psicon.png" alt="">
+                <img src="./src/images/AIicon.png" alt="">
+            </div>
+            <div class="aptitudes__div">
+                <h3>Diseño de experiencia</h3>
+                <p>Aprendí sobre diseño de experiencia e interfaces de usuario, usando las herramientas Figma, Adobe XD, entre otras.
+                </p>
+                <img src="./src/images/xdicon.png" alt="">
+                <img class="large" src="./src/images/figmaicon.png" alt="">
+            </div>
+            <div class="aptitudes__div">
+                <h3>Programación</h3>
+                <p>Tengo conocimiento sobre los lenguajes de programación de Java y Javascript, usando programas como Processing y Eclipse.
+                </p>
+                <img src="./src/images/proceicon.png" alt="">
+                <img src="./src/images/eclipseicon.png" alt="">
+            </div>
+        </article>
+    </section>
+    <section class="gallery">
+        <h2>Galería de fotos</h2>
+        <img class="arrow arrow--left" src="./src/icons/right-arrow.svg" alt="">
+        <img class="arrow arrow--right" src="./src/icons/right-arrow.svg" alt="">
+        <div class="gallery__strip">
+            <div class="gallery__container">
+                <div class="gallery__containerImages">
+                    <div class="gallery__img" style="background-image: url(./src/images/gallery2.png)">
+                    </div>
+                    <div class="gallery__img" style="background-image: url(./src/images/gallery1.png)">
+                    </div>
+                </div>
+                <div class="gallery__img gallery__img--large" style="background-image: url(./src/images/gallery3.png)">
+                </div>
+            </div>
 
-  <img src="/images/EL-PERRO-NO-BEBE-AGUA.jpg" alt="">
+            <div class="gallery__container">
+                <div class="gallery__containerImages">
+                    <div class="gallery__img" style="background-image: url(./src/images/gallery4.jpg)" >
+                    </div>
+                            <div class="gallery__containerVideo">
+                                <iframe class="gallery__video" src="https://www.youtube.com/embed/O6x6N8JfxCM" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                            </iframe>
+                        </div>
+                </div>
+                
+                <div class="gallery__img gallery__img--large" style="background-image: url(./src/images/gallery5.jpg)">
+                </div>
+            </div>
 
-  <script src="/scripts/client.js"></script>
+            <div class="gallery__container">
+                <div class="gallery__containerImages">
+                    <div class="gallery__containerVideo">
+                        <iframe class="gallery__video" src="https://www.youtube.com/embed/Nl2wBZ1ABPc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="gallery__img" style="background-image: url(./src/images/gallery6.jpg)">
+                    </div>
+                </div>
+                <div class="gallery__img gallery__img--large" style="background-image: url(./src/images/gallery7.jpg)">
+                </div>
+            </div>
+        </div>
 
+
+    </section>
+    <section class="project">
+        <h2>Proyecto: Agendas</h2>
+        <img class="project__image" src="" alt="">
+        <div class="project__content">    
+            <input class="project__input" type="range" min="1" max="6" value="0">
+            <p>¡Desliza para ver el proceso de personalización de una agenda!</p>
+        </div>
+        <div class="project__background"></div>
+    </section>
+    <section class="ad">
+        <div class="ad__info">
+            <h2>Proyecto más reciente</h2>
+            <p>Realizamos una aplicación llamada Choosit y simulamos sus interacciones en wireframes de papel.</p>
+            <a href="#">Leer más...</a>
+        </div>
+        <img src="./src/images/adviceimage.png" alt="">
+    </section>
+    <section class="newsletter">
+        <div class="newsletter__rect">
+            <h2>
+                Suscríbete
+            </h2>
+            <p>Para conocer mis nuevos proyectos </p>
+            <input type="text" placeholder="Ingresa tu correo electrónico">
+            <button>Enviar</button>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__logo-info">
+                <img src="./src/images/logop.png" alt="">
+                <p>Juli Salazar
+                    <br>Marca Personal
+                </p>
+            </div>
+            <div class="footer__information">
+                <div class="footer__social">
+                    <h5>Encuéntrame en: </h5>
+                    <img src="./src/icons/instagram.svg" alt="">
+                    <img src="./src/icons/facebook.svg" alt="">
+                    <img src="./src/icons/youtube.svg" alt="">
+
+                </div>
+                <div class="footer__politics">
+
+                    <h5>Privacidad</h5>
+                    <h5>Seguridad</h5>
+                    <h5>Condiciones</h5>
+                </div>
+            </div>
+            <div class="footer__button-up">
+                <a href="#up">Subir <img src="./src/icons/right-arrow.svg" alt=""></a>
+            </div>
+        </div>
+        <p>© 2020 Juli Salazar. Todos los derechos reservados.</p>
+    </footer>
+    <script src="./script/main.js"></script>
 </body>
+
 </html>

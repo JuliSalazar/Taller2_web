@@ -1,0 +1,50 @@
+.newsletter{
+    background-image: url("../src/images/newsletter-bg.png");
+    background-position: center;
+    background-size: cover;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    @media (min-width: $breakpoint-web){
+        font-size: 17px;
+        height: 200px;
+       }
+    &__rect{
+        margin: 0px auto;
+        width: 85%;
+        padding: 8px;
+        height: 85%;
+        background-color: $third-color;
+        color: #2E2E2E;
+        text-align: center;
+        @media (min-width: $breakpoint-web){
+            padding: 30px;
+            width: 45%;
+           }
+        input{
+            background: #FFFFFF;
+            border: 1px solid rgba(47, 47, 47, 0.43);
+            box-sizing: border-box;
+            padding: 10px;
+            width: 70%;
+            height: 35px;
+        }
+        h2{
+            text-transform: none;
+            color: black;
+        }
+        p{
+        margin-bottom: 10px; 
+        }
+        button{
+            background: #0E0E0E;
+            border: 0px;
+            box-sizing: border-box;
+            color: white;
+            padding: 10px;
+            height: 35px;
+        }
+    }
+}

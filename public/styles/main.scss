@@ -1,47 +1,46 @@
-p {
-  color: lightgray;
-  font-size: 30px;
+@import url('https://fonts.googleapis.com/css?family=Rosario&display=swap');
+
+$primary-color: #1A1A1A;
+$secondary-color: #050505;
+$third-color: #EFEFEF;
+$breakpoint-web: 1024px;
+
+html,body{
+    scroll-behavior: smooth;
 }
 
-.mainheader{
-  border: 2px solid red;
-}
-
-.mainfooter{
-  border: 2px solid green;
-}
-
-.product{
-  &__header{
-    background-color: lightblue;
-  }
-
-  &__description{
-    font-size: 20px;
-  }
-
-  &--with-options{
-    background: lightcoral;
-  }
-}
-
-.productlist{
-  display: flex;
-}
-
-.thumb{
-  border: 1px solid brown;
-  width: 33%;
-
-  &__link{
-    text-decoration: none;
-  }
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Rosario;
+    font-style: normal;
+    font-weight: normal;
   
-  &__title{
-    color: gray;
-  }
-
-  &__img{
-    width: 100%;
-  }
 }
+.button{
+    margin: 15px;
+    border: 0px;
+    background: rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+h2,h3{
+    font-weight: bold;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        text-align: center;
+}
+
+@import 'header';
+@import 'banner';
+@import 'caracteristics';
+@import 'aptitudes';
+@import 'gallery';
+@import 'project';
+@import 'ad';
+@import 'newsletter';
+@import 'footer';
+

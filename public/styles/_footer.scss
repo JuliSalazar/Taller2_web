@@ -1,0 +1,91 @@
+$fontsize-mobile: 14px;
+$fontsize-web: 17px;
+.footer{
+    width: 100%;
+    min-height: 130px;
+    background-color: $secondary-color;
+    color: #BABABA;
+    display: flex;
+    flex-direction: column;
+    font-size: $fontsize-mobile;
+    @media (min-width: $breakpoint-web){
+        font-size: $fontsize-web;
+    }
+    
+    &__content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__logo-info{
+        margin: 15px 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__information{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-self: center;
+        width: 55%;
+        border-left:  1px solid #363636;
+        padding: 5px 10px;
+        height: 80px;
+       
+        h5{
+            display: inline-block;
+            
+        }
+        img{
+            width: 20px;
+            height: 20px;
+        }
+
+    }
+    &__social{
+        display: flex;
+        justify-content: space-between;
+        @media (min-width: $breakpoint-web){
+            width: 30%;
+        }
+    }
+    &__politics{
+        display: flex;
+        justify-content: space-between;
+        @media (min-width: $breakpoint-web){
+            width: 80%;
+        }
+    }
+    &__button-up {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        margin: 10px;
+        border: 0px;
+        background: rgba(255, 255, 255, 0.95);
+        font-weight: bold;
+        a{
+            color: black;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 3px 10px;
+            img{
+                transform: rotate(-90deg);
+                width: 10px;
+                height: 10px;
+                margin-left: 4px; 
+                @media (min-width: $breakpoint-web){
+                    width: 20px;
+                height: 20px;
+                }
+            }
+    }
+}
+    
+    p{
+        text-align: center;
+    }
+}

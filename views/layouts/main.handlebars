@@ -8,22 +8,56 @@
   <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-
-  <header class="mainheader">
-    <h1>La gran tienda cambiada</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/tienda">Tienda</a>
-      <a href="/producto">Producto</a>
-      <a href="/sobre-nosotros">Sobre nosotros</a>
-    </nav>
-  </header>
+  <header class="header" id="up">
+        <div class="header__logo">
+            <img src="./src/images/logop.png" alt="">
+        </div>
+        <div class="icon-menu">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+        <nav class="header__nav">
+            <a class="header__link" href="/">Inicio</a>
+            <a class="header__link" href="">Acerca de mí</a>
+            <a class="header__link" href="">Proyectos</a>
+            <a class="header__link" href="">Contacto</a>
+            <a class="header__link" href="/tienda">Tienda</a>
+            <a class="header__link" href="/carrito">Carrito</a>
+        </nav>
+    </header>
 
   {{{ body }}}
 
-  <footer class="mainfooter">
-    Footer con toda la info
-  </footer>
+  <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__logo-info">
+                <img src="./src/images/logop.png" alt="">
+                <p>Juli Salazar
+                    <br>Marca Personal
+                </p>
+            </div>
+            <div class="footer__information">
+                <div class="footer__social">
+                    <h5>Encuéntrame en: </h5>
+                    <img src="./src/icons/instagram.svg" alt="">
+                    <img src="./src/icons/facebook.svg" alt="">
+                    <img src="./src/icons/youtube.svg" alt="">
+
+                </div>
+                <div class="footer__politics">
+
+                    <h5>Privacidad</h5>
+                    <h5>Seguridad</h5>
+                    <h5>Condiciones</h5>
+                </div>
+            </div>
+            <div class="footer__button-up">
+                <a href="#up">Subir <img src="./src/icons/right-arrow.svg" alt=""></a>
+            </div>
+        </div>
+        <p>© 2020 Juli Salazar. Todos los derechos reservados.</p>
+    </footer>
   
 </body>
 </html>
