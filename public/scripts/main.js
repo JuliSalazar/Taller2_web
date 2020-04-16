@@ -52,7 +52,7 @@ var projectImage = document.querySelector('.project__image');
 var projectInput = document.querySelector('.project__input');
 function handleProjectInput () {
     var index = projectInput.value;
-    projectImage.setAttribute('src', './src/images/agenda' + index + '.jpg');
+    projectImage.setAttribute('src', '/src/images/agenda' + index + '.jpg');
 }
 handleProjectInput();
 projectInput.addEventListener('input', handleProjectInput);

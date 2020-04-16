@@ -1,24 +1,24 @@
-
-
-<h1 class="title">{{ title }}</h1>
-
-<aside>
-  <h2>Filtros</h2>
-</aside>
-
-<nav>
-
-</nav>
-
-<h2>Lista de productos</h2>
-<main class="productlist">
-  {{#each products}}
-  <div class="thumb">
-    <a href="/producto/{{ title }}/{{ id }}" class="thumb__link">
-      <h4 class="thumb__title">{{ title }}</h4>
-      <img class="thumb__img" src="{{ img }}" alt="">
-      <p class="thumb__price">{{ price }}</p>
-    </a>
+<main class="banner banner--store">
+  <div class="banner__info">
+    <h2>Productos</h2>
+    <p>Descripción de la tienda</p>
   </div>
-  {{/each}}
 </main>
+<section class="store">
+  <aside class="store__filters">
+    <h2>Filtrar por</h2>
+    <h3>Categoría</h3>
+  </aside>
+  <section class="store__products">
+    {{#each products}}
+    <div class="thumb">
+      <a href="/producto/{{ name }}" class="thumb__link">
+        <img class="thumb__img" src="{{ img }}" alt="">
+        <h4 class="thumb__name">{{ name }}</h4>
+        <h4>${{price}}</h4>
+        
+      </a>
+    </div>
+    {{/each}}
+  </section>
+</section>

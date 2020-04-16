@@ -142,6 +142,10 @@ h2, h3 {
           justify-content: center;
 }
 
+.banner--store {
+  background-image: url("../src/images/bannerStore.png");
+}
+
 .banner__info {
   position: relative;
   top: 70%;
@@ -798,5 +802,71 @@ h2, h3 {
 
 .footer p {
   text-align: center;
+}
+
+.store {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.store__filters {
+  width: 30%;
+}
+
+.store__filters h2 {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.store__filters h3 {
+  text-transform: none;
+  text-align: left;
+}
+
+.store__products {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/*.filters{
+    h2{
+        margin-left: 20px;
+        text-align: left;
+    }
+    h3{
+        text-transform: none;
+    }
+    max-width: 20%;
+}*/
+.thumb {
+  width: 330px;
+  height: 470px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.thumb a {
+  text-decoration: none;
+  color: black;
+}
+
+.thumb__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 321px;
+  height: 328px;
+}
+
+.thumb__name {
+  font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */

@@ -5,6 +5,10 @@
     background-position: center;
     background-size: cover;
     justify-content: center;
+
+    &--store{
+        background-image: url("../src/images/bannerStore.png");
+    }
 }
 .banner__info{
     position: relative;

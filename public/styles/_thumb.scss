@@ -1,0 +1,17 @@
+.thumb{
+    width: 330px;
+    height: 470px;
+    display: flex;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    &__img{
+        object-fit: cover;
+        width: 321px;
+        height: 328px;
+    }
+    &__name{
+        font-weight: bold;
+    }
+}

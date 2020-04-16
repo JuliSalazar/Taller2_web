@@ -1,0 +1,33 @@
+.store{
+    width: 100%;
+    display: flex;
+    position: relative;
+    &__filters{
+        width: 30%;
+        
+        h2{
+            margin-left: 20px;
+            text-align: left;
+        }
+        h3{
+            text-transform: none;
+            text-align: left;
+        }
+    }
+    &__products{
+        width: 70%;
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+    }
+}
+/*.filters{
+    h2{
+        margin-left: 20px;
+        text-align: left;
+    }
+    h3{
+        text-transform: none;
+    }
+    max-width: 20%;
+}*/
