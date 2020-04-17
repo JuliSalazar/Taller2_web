@@ -4,22 +4,10 @@ const express = require('express');
 const path = require('path');
 // importart express-handlebars
 const exphbs = require('express-handlebars');
-
 // importar productos
 const products = require('./products');
-
-// recorrer productos para agregar freeShipping
-products.forEach(function (elem) {
-  if(elem.price >= 80000){
-    elem.freeShipping = true;
-  } else {
-    elem.freeShipping = false;
-  }
-})
-
 // instanciar servidor de express
 const app = express();
-
 // registrar motor de render para handlebars
 app.engine('handlebars', exphbs());
 // use el motor de render handlebars
@@ -30,28 +18,65 @@ app.use(express.static('public'));
 
 // configurar ruta inicial
 app.get('/', function (request, response) {
-  console.log('hola en la consola');
-  // response.send('hola en chrome');
   // responder con un archivo
   response.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
-app.get('/contacto', function (request, response) {
-  console.log('hola en contacto');
-  // responder con un texto
-  response.send('página de contacto');
-});
-
-app.get('/sobre-nosotros', function (req, res) {
-  res.send('Texto bien chévere sobre esta empresa.');
-});
-
 // ruta para la lista de productos con handlebars
 app.get('/tienda', function (req, res) {
+  
+  //FILTRO POR CATEGORÍA
+// arreglo filtrado
+var filtered = products;
+  if(req.query.category){
+  // creo la copia del arreglo filtrado
+  filtered = products.filter(function (elem) {
+    // si el precio del elemento es mayor al precio que el usuario preguntó
+    if(req.query.category == elem.category){
+      return true;
+    }
+  });
+}
+//FILTRO POR COLOR
+if(req.query.color){
+  // creo la copia del arreglo filtrado
+  filtered = products.filter(function (elem) {
+    // si el precio del elemento es mayor al precio que el usuario preguntó
+    if(req.query.color == elem.color){
+      return true;
+    }
+  });
+}
+
+//ORDENAMIENTO
+if(req.query.priceOrd1){
+  // creo la copia del arreglo filtrado
+  filtered = products.sort(function (elem,elem2) {
+    if(elem.price > elem2.price){
+      return 1;
+    }
+    if(elem.price < elem2.price){
+      return -1;
+    }
+    return 0;
+  });
+}
+if(req.query.priceOrd2){
+  // creo la copia del arreglo filtrado
+  filtered = products.sort(function (elem,elem2) {
+    if(elem.price < elem2.price){
+      return 1;
+    }
+    if(elem.price > elem2.price){
+      return -1;
+    }
+    return 0;
+  });
+}
+
   // objeto contexto
   var context = {
-    title: 'El título cambiado',
-    products: products,
+    products: filtered,
   }
   // renderizar vista
   res.render('store', context);
@@ -61,12 +86,12 @@ app.get('/tienda', function (req, res) {
 app.get('/producto/:name/:id', function (req, res) {
   var context = {};
 
-  // buscar en la base de datos el elemento correspondiente
+  /* buscar en la base de datos el elemento correspondiente
   var foundElement = products.find(function (elem) {
     if(elem.id == req.params.id){
       return true;
     }
-  });
+  });*/
   
   // pasar las variables de ese elemento al contexto
   context = foundElement;
@@ -79,6 +104,7 @@ app.get('/producto/:name/:id', function (req, res) {
   // renderizar vista
   res.render('product', context);
 });
+
 
 // iniciar servidor en puerto 3000
 app.listen(3000, function () {

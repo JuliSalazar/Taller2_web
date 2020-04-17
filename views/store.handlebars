@@ -8,6 +8,23 @@
   <aside class="store__filters">
     <h2>Filtrar por</h2>
     <h3>Categoría</h3>
+    <a href="/tienda">Todos los productos</a>
+    <a href="/tienda/?category=agenda">Agendas</a>
+    <a href="/tienda/?category=calendario">Calendarios</a>
+    <a href="/tienda/?category=plannerSemanal">Planners Semanales</a>
+    <a href="/tienda/?category=plannerMensual">Planners Mensuales</a>
+    <h3>Precio</h3>
+    <h3>Color</h3>
+    <a href="/tienda">Todos los colores</a>
+    <a href="/tienda/?color=negro">Negro</a>
+    <a href="/tienda/?color=rojo">Rojo</a>
+    <a href="/tienda/?color=amarillo">Amarillo</a>
+    <a href="/tienda/?color=verde">Verde</a>
+    <a href="/tienda/?color=azul">Azul</a>
+    <h2>Ordenar por</h2>
+    <h3>Precio</h3>
+    <a href="/tienda/?priceOrd1=true">Menor a mayor</a>
+    <a href="/tienda/?priceOrd2=true">Mayor a menor</a>
   </aside>
   <section class="store__products">
     {{#each products}}
@@ -16,7 +33,7 @@
         <img class="thumb__img" src="{{ img }}" alt="">
         <h4 class="thumb__name">{{ name }}</h4>
         <h4>${{price}}</h4>
-        
+
       </a>
     </div>
     {{/each}}
