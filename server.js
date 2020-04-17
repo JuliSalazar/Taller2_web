@@ -102,16 +102,38 @@ app.get('/tienda', function (req, res) {
       return 0;
     });
   }
+  
   //ORDENAR ALFABETICO DE A-Z
   if (req.query.alfaOrd1) {
     // creo la copia del arreglo filtrado
-    filtered = products.sort();
+    filtered = products.sort(function (elem, elem2) {
+      if (elem.name > elem2.name) {
+        return 1;
+      }
+      if (elem.name < elem2.name) {
+        return -1;
+      }
+      return 0;
+    });
   }
+
   //ORDENAR ALFABETICO DE Z-A
-  /*if (req.query.alfaOrd2) {
+  if (req.query.alfaOrd2) {
     // creo la copia del arreglo filtrado
-    filtered = products.sort();
-  }*/
+    filtered = products.sort(function (elem, elem2) {
+      if (elem.name < elem2.name) {
+        return 1;
+      }
+      if (elem.name > elem2.name) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+  //Arreglo de estrellas
+  filtered.forEach(function (elem){
+    elem.starsArray = Array.from({ length: elem.stars });
+  });
 
   // objeto contexto
   var context = {
@@ -122,15 +144,17 @@ app.get('/tienda', function (req, res) {
 });
 
 // ruta para la lista de productos con handlebars
-app.get('/producto/:name/:id', function (req, res) {
-  var context = {};
+app.get('/producto/:name', function (req, res) {
+  var context = {
 
-  /* buscar en la base de datos el elemento correspondiente
+  };
+
+   //buscar en la base de datos el elemento correspondiente
   var foundElement = products.find(function (elem) {
-    if(elem.id == req.params.id){
+    if(elem.name == req.params.name){
       return true;
     }
-  });*/
+  });
 
   // pasar las variables de ese elemento al contexto
   context = foundElement;

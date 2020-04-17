@@ -8,29 +8,44 @@
   <aside class="store__filters">
     <h2>Filtrar por</h2>
     <h3>Categoría</h3>
+    <div class="info">
     <a href="/tienda">Todos los productos</a>
     <a href="/tienda/?category=agenda">Agendas</a>
     <a href="/tienda/?category=calendario">Calendarios</a>
     <a href="/tienda/?category=plannerSemanal">Planners Semanales</a>
     <a href="/tienda/?category=plannerMensual">Planners Mensuales</a>
+    </div>
     <h3>Precio</h3>
+    <div class="info">
+    <label> <input type="checkbox" class="store__checkbok" value="first_checkbox">$1.000 - $5.000</label>
+    <label> <input type="checkbox" class="store__checkbok" value="first_checkbox">$16.000 - $20.000</label>
+    <label> <input type="checkbox" class="store__checkbok" value="first_checkbox">$21.000 - $24.000</label>
+    </div>
     <h3>Color</h3>
+    <div class="info">
     <a href="/tienda">Todos los colores</a>
     <a href="/tienda/?color=negro">Negro</a>
     <a href="/tienda/?color=rojo">Rojo</a>
     <a href="/tienda/?color=amarillo">Amarillo</a>
     <a href="/tienda/?color=verde">Verde</a>
     <a href="/tienda/?color=azul">Azul</a>
+    </div>
     <h2>Ordenar por</h2>
     <h3>Precio</h3>
+    <div class="info">
     <a href="/tienda/?priceOrd1=true">Menor a mayor</a>
     <a href="/tienda/?priceOrd2=true">Mayor a menor</a>
+    </div>
     <h3>Puntuación</h3>
+    <div class="info">
     <a href="/tienda/?starsOrd1=true">Menor a mayor</a>
     <a href="/tienda/?starsOrd2=true">Mayor a menor</a>
+    </div>
     <h3>Alfabeto</h3>
+    <div class="info">
     <a href="/tienda/?alfaOrd1=true">A-Z</a>
     <a href="/tienda/?alfaOrd2=true">Z-A</a>
+    </div>
   </aside>
   <section class="store__products">
     {{#each products}}
@@ -39,7 +54,10 @@
         <img class="thumb__img" src="{{ img }}" alt="">
         <h4 class="thumb__name">{{ name }}</h4>
         <h4>${{price}}</h4>
-        <h4>{{stars}}</h4>
+        {{#each starsArray}}
+        <img src="/src/images/Star1.png" alt="">
+        {{/each}}
+        
       </a>
     </div>
     {{/each}}

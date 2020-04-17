@@ -810,10 +810,12 @@ h2, h3 {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  margin-top: 40px;
 }
 
 .store__filters {
   width: 30%;
+  margin-right: 30px;
 }
 
 .store__filters h2 {
@@ -823,7 +825,9 @@ h2, h3 {
 
 .store__filters h3 {
   text-transform: none;
+  padding: 10px 10px 10px 40px;
   text-align: left;
+  background-color: #EFEFEF;
 }
 
 .store__products {
@@ -836,16 +840,24 @@ h2, h3 {
       flex-wrap: wrap;
 }
 
-/*.filters{
-    h2{
-        margin-left: 20px;
-        text-align: left;
-    }
-    h3{
-        text-transform: none;
-    }
-    max-width: 20%;
-}*/
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+  margin-left: 45px;
+}
+
+.info a, .info label {
+  color: black;
+  text-decoration: none;
+  margin: 5px;
+}
+
 .thumb {
   width: 330px;
   height: 470px;

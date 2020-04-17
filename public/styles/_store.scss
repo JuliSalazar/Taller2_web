@@ -2,16 +2,19 @@
     width: 100%;
     display: flex;
     position: relative;
+    margin-top: 40px;
     &__filters{
         width: 30%;
-        
+        margin-right: 30px;
         h2{
             margin-left: 20px;
             text-align: left;
         }
         h3{
             text-transform: none;
+            padding: 10px 10px 10px 40px;
             text-align: left;
+            background-color: #EFEFEF;
         }
     }
     &__products{
@@ -21,13 +24,14 @@
         flex-wrap: wrap;
     }
 }
-/*.filters{
-    h2{
-        margin-left: 20px;
-        text-align: left;
+.info{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-left: 45px;
+    a,label{
+        color: black;
+        text-decoration: none;
+        margin: 5px;
     }
-    h3{
-        text-transform: none;
-    }
-    max-width: 20%;
-}*/
+}
