@@ -25,6 +25,12 @@
     <h3>Precio</h3>
     <a href="/tienda/?priceOrd1=true">Menor a mayor</a>
     <a href="/tienda/?priceOrd2=true">Mayor a menor</a>
+    <h3>Puntuación</h3>
+    <a href="/tienda/?starsOrd1=true">Menor a mayor</a>
+    <a href="/tienda/?starsOrd2=true">Mayor a menor</a>
+    <h3>Alfabeto</h3>
+    <a href="/tienda/?alfaOrd1=true">A-Z</a>
+    <a href="/tienda/?alfaOrd2=true">Z-A</a>
   </aside>
   <section class="store__products">
     {{#each products}}
@@ -33,7 +39,7 @@
         <img class="thumb__img" src="{{ img }}" alt="">
         <h4 class="thumb__name">{{ name }}</h4>
         <h4>${{price}}</h4>
-
+        <h4>{{stars}}</h4>
       </a>
     </div>
     {{/each}}

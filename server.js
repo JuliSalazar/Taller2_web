@@ -24,55 +24,94 @@ app.get('/', function (request, response) {
 
 // ruta para la lista de productos con handlebars
 app.get('/tienda', function (req, res) {
-  
-  //FILTRO POR CATEGORÍA
-// arreglo filtrado
-var filtered = products;
-  if(req.query.category){
-  // creo la copia del arreglo filtrado
-  filtered = products.filter(function (elem) {
-    // si el precio del elemento es mayor al precio que el usuario preguntó
-    if(req.query.category == elem.category){
-      return true;
-    }
-  });
-}
-//FILTRO POR COLOR
-if(req.query.color){
-  // creo la copia del arreglo filtrado
-  filtered = products.filter(function (elem) {
-    // si el precio del elemento es mayor al precio que el usuario preguntó
-    if(req.query.color == elem.color){
-      return true;
-    }
-  });
-}
 
-//ORDENAMIENTO
-if(req.query.priceOrd1){
-  // creo la copia del arreglo filtrado
-  filtered = products.sort(function (elem,elem2) {
-    if(elem.price > elem2.price){
-      return 1;
-    }
-    if(elem.price < elem2.price){
-      return -1;
-    }
-    return 0;
-  });
-}
-if(req.query.priceOrd2){
-  // creo la copia del arreglo filtrado
-  filtered = products.sort(function (elem,elem2) {
-    if(elem.price < elem2.price){
-      return 1;
-    }
-    if(elem.price > elem2.price){
-      return -1;
-    }
-    return 0;
-  });
-}
+  //FILTRO POR CATEGORÍA
+  // arreglo filtrado
+  var filtered = products;
+  if (req.query.category) {
+    // creo la copia del arreglo filtrado
+    filtered = products.filter(function (elem) {
+      // si el precio del elemento es mayor al precio que el usuario preguntó
+      if (req.query.category == elem.category) {
+        return true;
+      }
+    });
+  }
+  //FILTRO POR PRECIO
+  //FILTRO POR COLOR
+  if (req.query.color) {
+    // creo la copia del arreglo filtrado
+    filtered = products.filter(function (elem) {
+      // si el precio del elemento es mayor al precio que el usuario preguntó
+      if (req.query.color == elem.color) {
+        return true;
+      }
+    });
+  }
+
+  //ORDENAR PRECIO DE MENOR A MAYOR
+  if (req.query.priceOrd1) {
+    // creo la copia del arreglo filtrado
+    filtered = products.sort(function (elem, elem2) {
+      if (elem.price > elem2.price) {
+        return 1;
+      }
+      if (elem.price < elem2.price) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+  //ORDENAR PRECIO DE MAYOR A MENOR
+  if (req.query.priceOrd2) {
+    // creo la copia del arreglo filtrado
+    filtered = products.sort(function (elem, elem2) {
+      if (elem.price < elem2.price) {
+        return 1;
+      }
+      if (elem.price > elem2.price) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+
+  //ORDENAR PUNTUACION DE MENOR A MAYOR
+  if (req.query.starsOrd1) {
+    // creo la copia del arreglo filtrado
+    filtered = products.sort(function (elem, elem2) {
+      if (elem.stars > elem2.stars) {
+        return 1;
+      }
+      if (elem.stars < elem2.stars) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+  //ORDENAR PUNTUACION DE MAYOR A MENOR
+  if (req.query.starsOrd2) {
+    // creo la copia del arreglo filtrado
+    filtered = products.sort(function (elem, elem2) {
+      if (elem.stars < elem2.stars) {
+        return 1;
+      }
+      if (elem.stars > elem2.stars) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+  //ORDENAR ALFABETICO DE A-Z
+  if (req.query.alfaOrd1) {
+    // creo la copia del arreglo filtrado
+    filtered = products.sort();
+  }
+  //ORDENAR ALFABETICO DE Z-A
+  /*if (req.query.alfaOrd2) {
+    // creo la copia del arreglo filtrado
+    filtered = products.sort();
+  }*/
 
   // objeto contexto
   var context = {
@@ -92,7 +131,7 @@ app.get('/producto/:name/:id', function (req, res) {
       return true;
     }
   });*/
-  
+
   // pasar las variables de ese elemento al contexto
   context = foundElement;
 

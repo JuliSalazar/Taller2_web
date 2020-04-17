@@ -1,7 +1,7 @@
 const products = [
   //Cuadernos
   {
-    name: 'Cuaderno negro punteado de 160 hojas',
+    name: 'ACuaderno negro punteado de 160 hojas',
     category: 'agenda',
     color: 'negro',
     img: '/src/imgProducts/Agenda1.jpg',
@@ -10,7 +10,7 @@ const products = [
     stars: '5'
   },
   {
-    name: 'Cuaderno azul punteado de 160 hojas' ,
+    name: 'BCuaderno azul punteado de 160 hojas' ,
     color: 'azul',
     category: 'agenda',
     img: '/src/imgProducts/Agenda3.jpg',
@@ -93,7 +93,7 @@ const products = [
   },
   //Planner semanal
   {
-    name: 'Planner semanal amarillo' ,
+    name: 'APlanner semanal amarillo' ,
     color: 'amarillo',
     category: 'plannerSemanal',
     img: '/src/imgProducts/Planner1.jpg',
@@ -102,7 +102,7 @@ const products = [
     stars: '2'
   },
   {
-    name: 'Planner semanal negro' ,
+    name: 'BPlanner semanal negro' ,
     color: 'negro',
     category: 'plannerSemanal',
     img: '/src/imgProducts/Planner2.jpg',
