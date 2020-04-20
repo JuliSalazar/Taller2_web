@@ -146,6 +146,10 @@ h2, h3 {
   background-image: url("../src/images/bannerStore.png");
 }
 
+.banner--product {
+  height: 800px;
+}
+
 .banner__info {
   position: relative;
   top: 70%;

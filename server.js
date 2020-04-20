@@ -144,28 +144,25 @@ app.get('/tienda', function (req, res) {
 });
 
 // ruta para la lista de productos con handlebars
-app.get('/producto/:name', function (req, res) {
+app.get('/producto/:name/:id', function (req, res) {
   var context = {
 
   };
-
+  var id = parseInt(req.params.id);
+    var product =  products[id];
    //buscar en la base de datos el elemento correspondiente
   var foundElement = products.find(function (elem) {
-    if(elem.name == req.params.name){
+    
+    /*if(elem.id == parseInt(req.params.id)){
+      
       return true;
-    }
+    }*/
   });
 
   // pasar las variables de ese elemento al contexto
   context = foundElement;
-
-  console.log(req.params.name);
-
-  // devuélvame la información del producto # 1
-  // pasar info del producto al contexto
-
   // renderizar vista
-  res.render('product', context);
+  res.render('product', product);
 });
 
 
