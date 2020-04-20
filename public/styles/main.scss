@@ -27,11 +27,14 @@ html,body{
     font-weight: bold;
     padding: 10px 20px;
 }
-h2,h3{
+h2,h3,h1{
     font-weight: bold;
         margin-bottom: 5px;
         text-transform: uppercase;
         text-align: center;
+}
+a{
+    text-decoration: none;
 }
 
 @import 'header';
@@ -46,4 +49,5 @@ h2,h3{
 
 @import 'store';
 @import 'thumb';
+@import 'product';
 

@@ -23,11 +23,15 @@ html, body {
   padding: 10px 20px;
 }
 
-h2, h3 {
+h2, h3, h1 {
   font-weight: bold;
   margin-bottom: 5px;
   text-transform: uppercase;
   text-align: center;
+}
+
+a {
+  text-decoration: none;
 }
 
 .header {
@@ -378,6 +382,15 @@ h2, h3 {
   left: 0px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.arrow--product {
+  position: relative;
+  top: 5px;
+  margin-right: 8px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  fill: white;
 }
 
 .project {
@@ -884,5 +897,74 @@ h2, h3 {
 
 .thumb__name {
   font-weight: bold;
+}
+
+.product {
+  width: 45%;
+  height: 450px;
+  background: rgba(20, 20, 20, 0.8);
+  position: absolute;
+  right: 0px;
+  top: 30%;
+  color: white;
+  padding: 20px 30px 20px 40px;
+  /*display: flex;
+    flex-direction: column;
+    align-content: space-around;*/
+}
+
+.product a {
+  display: block;
+  color: white;
+  margin-bottom: 20px;
+  margin-left: -27px;
+  font-size: 20px;
+}
+
+.product h1 {
+  margin: 10px 0px;
+  text-align: left;
+}
+
+.product h4, .product h2 {
+  margin: 10px 0px;
+  text-align: left;
+}
+
+.product h4 {
+  width: 80%;
+}
+
+.inputNum {
+  border: none;
+  outline: none;
+  padding: 5px;
+  background: none;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+.nice-number {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.nice-number input {
+  vertical-align: middle;
+  -moz-appearance: textfield;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  margin: 0;
+  text-align: center;
+}
+
+.nice-number input::-webkit-inner-spin-button,
+.nice-number input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */

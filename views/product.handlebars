@@ -1,38 +1,19 @@
 <main class="banner banner--product" style="background-image: url('{{img}}');">
-  <div class="banner__info">
-    
+  <div class="product">
+    <a href="">
+      <img class="arrow arrow--product" src="/src/icons/white-right-arrow.svg">Volver
+    </a>
+    {{#each starsArray}}
+    <img src="/src/images/WhiteStar.png" alt="">
+    {{/each}}
+    <h1>{{ name }}</h1>
+    <h4>{{ description }}</h4>
+    <h2>${{price}}</h2>
+    <h4>Unidades:</h4>
+    <button class="button">Añadir al carrito</button>
+      <input class="inputNum" type="number" value="1">
+
+
   </div>
 
 </main>
-<!--<div class="product {{#if options}}productwith-options{{/if}}">
-
-  <section class="producto__section">
-    <img src="{{ img }}" alt="">
-    <p class="product__description">
-      {{ description }}
-    </p>
-  </section>
-
-  {{#if options}}
-    <h3>Tiene opciones disponibles</h3>
-    <ul>
-      {{#each options}}
-        <li>{{ this }}</li>
-      {{/each}}
-    </ul>
-  {{else}}
-    <h3>No tiene opciones disponibles</h3>
-  {{/if}}
-
-  {{log variations}}
-
-  {{#if variations}}
-    <h3>Tiene variaciones</h3>
-    <ul>
-      {{#each variations}}
-        <li> {{@index}}  {{ name }} <strong>{{ price }}</strong></li>
-      {{/each}}
-    </ul>
-  {{/if}}
-
-</div>-->

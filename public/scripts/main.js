@@ -57,6 +57,16 @@ function handleProjectInput () {
 handleProjectInput();
 projectInput.addEventListener('input', handleProjectInput);
 
+$(function(){
+
+    $('input[type="number"]').niceNumber();
+  
+  });
+
+
+
+  
+
 
 
 
