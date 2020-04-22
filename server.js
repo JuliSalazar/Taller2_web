@@ -38,6 +38,15 @@ app.get('/tienda', function (req, res) {
     });
   }
   //FILTRO POR PRECIO
+  if (req.query.price1) {
+    // creo la copia del arreglo filtrado
+    filtered = products.filter(function (elem) {
+      // si el precio del elemento es mayor al precio que el usuario preguntó
+      if (req.query.price1 <= elem.price && req.query.price2 >= elem.price ) {
+        return true;
+      }
+    });
+  }
   //FILTRO POR COLOR
   if (req.query.color) {
     // creo la copia del arreglo filtrado
@@ -145,24 +154,18 @@ app.get('/tienda', function (req, res) {
 
 // ruta para la lista de productos con handlebars
 app.get('/producto/:name/:id', function (req, res) {
-  var context = {
-
-  };
   var id = parseInt(req.params.id);
     var product =  products[id];
-   //buscar en la base de datos el elemento correspondiente
-  var foundElement = products.find(function (elem) {
-    
-    /*if(elem.id == parseInt(req.params.id)){
-      
-      return true;
-    }*/
-  });
-
-  // pasar las variables de ese elemento al contexto
-  context = foundElement;
   // renderizar vista
   res.render('product', product);
+});
+
+app.get('/carrito', function (req, res) {
+  var context = {
+    
+  }
+  // renderizar vista
+  res.render('cart', context);
 });
 
 

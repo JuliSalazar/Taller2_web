@@ -23,39 +23,43 @@ var btnRight = document.querySelector('.arrow--right');
 var btnLeft = document.querySelector('.arrow--left');
 var galleryStrip = document.querySelector(".gallery__strip");
 var posX = 0;
-var width = galleryStrip.offsetWidth;
-function handleBtnNextClick(){
-    var quantity = galleryStrip.children.length;
-    if(posX > -width * (quantity - 1)){
-        posX -= width;
-    } else {
-        posX = 0;
-    }
-    galleryStrip.style.transform = 'translate(' + posX + 'px, 0px)';
-}
-    btnRight.addEventListener('click',handleBtnNextClick);
-
-    function handleBtnPrevClick () {
+if(galleryStrip){
+    var width = galleryStrip.offsetWidth;
+    function handleBtnNextClick(){
         var quantity = galleryStrip.children.length;
-        if(posX < 0){
-            posX += width;
+        if(posX > -width * (quantity - 1)){
+            posX -= width;
         } else {
-            posX = -width * (quantity - 1);
+            posX = 0;
         }
         galleryStrip.style.transform = 'translate(' + posX + 'px, 0px)';
     }
-    btnLeft.addEventListener('click', handleBtnPrevClick);
+        btnRight.addEventListener('click',handleBtnNextClick);
+    
+        function handleBtnPrevClick () {
+            var quantity = galleryStrip.children.length;
+            if(posX < 0){
+                posX += width;
+            } else {
+                posX = -width * (quantity - 1);
+            }
+            galleryStrip.style.transform = 'translate(' + posX + 'px, 0px)';
+        }
+        btnLeft.addEventListener('click', handleBtnPrevClick);
+}
 
 //Javascript para el funcionamiento de la interacción del usuario con las imagenes
 
 var projectImage = document.querySelector('.project__image');
 var projectInput = document.querySelector('.project__input');
-function handleProjectInput () {
-    var index = projectInput.value;
-    projectImage.setAttribute('src', '/src/images/agenda' + index + '.jpg');
+if(projectImage){
+    function handleProjectInput () {
+        var index = projectInput.value;
+        projectImage.setAttribute('src', '/src/images/agenda' + index + '.jpg');
+    }
+    handleProjectInput();
+    projectInput.addEventListener('input', handleProjectInput);
 }
-handleProjectInput();
-projectInput.addEventListener('input', handleProjectInput);
 
 $(function(){
 

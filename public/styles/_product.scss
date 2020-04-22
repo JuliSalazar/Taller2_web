@@ -7,9 +7,6 @@
     top: 30%;
     color: white;
     padding: 20px 30px 20px 40px;
-    /*display: flex;
-    flex-direction: column;
-    align-content: space-around;*/
     a{
         display: block;
         color: white;
@@ -22,7 +19,7 @@
         text-align: left;
     }
     h4,h2{
-        margin: 10px 0px;
+        margin: 20px 0px;
         text-align: left;
     }
     h4{
@@ -36,22 +33,41 @@
     background: none;
     border-bottom: 1px solid white;
     color: white;
+    font-size: 20px;
+}
+.units{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    h4{
+        display: contents;
+    }
 }
 .nice-number {
+    margin-left: -180px;
     display: inline-flex;
     justify-content: stretch;
+    input {
+      vertical-align: middle;
+      -moz-appearance: textfield;
+      box-sizing: content-box;
+      margin: 0;
+      text-align: center;
+    }
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    button{
+        font-size: 20px;
+        background: none;
+        color: white;
+        border: none;
+        padding: 5px;
+        outline: none;
+    }
   }
   
-  .nice-number input {
-    vertical-align: middle;
-    -moz-appearance: textfield;
-    box-sizing: content-box;
-    margin: 0;
-    text-align: center;
-  }
   
-  .nice-number input::-webkit-inner-spin-button,
-  .nice-number input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }

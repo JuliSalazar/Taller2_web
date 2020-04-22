@@ -13,9 +13,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vagyriag/201-web-node-express-intro/issues"
+    "url": "git+https://github.com/JuliSalazar/Taller2_web.git/issues"
   },
-  "homepage": "https://github.com/vagyriag/201-web-node-express-intro#readme",
+  "homepage": "git+https://github.com/JuliSalazar/Taller2_web.git#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^4.0.3"
