@@ -10,16 +10,18 @@
     <h3>Categoría</h3>
     <div class="info">
     <a href="/tienda">Todos los productos</a>
-    <a href="/tienda/?category=agenda">Agendas</a>
+    <a href="/tienda/?category=agenda" class="{{#if isAgenda }}selected{{/if}}">Agendas</a>
     <a href="/tienda/?category=calendario">Calendarios</a>
     <a href="/tienda/?category=plannerSemanal">Planners Semanales</a>
     <a href="/tienda/?category=plannerMensual">Planners Mensuales</a>
     </div>
     <h3>Precio</h3>
     <div class="info">
-    <a href="/tienda/?price1=1000&price2=5000"> <input type="checkbox" class="store__checkbok" value="first_checkbox">$1.000 - $5.000</a>
-    <a href="/tienda/?price1=15000&price2=20000"> <input type="checkbox" class="store__checkbok" value="first_checkbox">$15.000 - $20.000</a>
-    <a href="/tienda/?price1=21000&price2=24000"> <input type="checkbox" class="store__checkbok" value="first_checkbox">$21.000 - $24.000</a>
+    <a href="/tienda/?price1=1000&price2=5000"> 
+    <input type="checkbox" class="store__checkbok">$1.000 - $5.000
+    </a>
+    <a href="/tienda/?price1=15000&price2=20000"> <input type="checkbox" class="store__checkbok">$15.000 - $20.000</a>
+    <a href="/tienda/?price1=21000&price2=24000"> <input type="checkbox" class="store__checkbok">$21.000 - $24.000</a>
     </div>
     <h3>Color</h3>
     <div class="info">

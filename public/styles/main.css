@@ -875,6 +875,10 @@ a {
   margin: 5px;
 }
 
+.selected {
+  font-weight: bold;
+}
+
 .thumb {
   width: 330px;
   height: 470px;
