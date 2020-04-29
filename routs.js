@@ -1,4 +1,5 @@
 const assert = require('assert');
+const ObjectId = require('mongodb').ObjectId;
 function configureRouts(app, db) {
     // configurar ruta inicial
     app.get('/', function (request, response) {
@@ -76,7 +77,7 @@ function configureRouts(app, db) {
             delete filters.$and;
         }
 
-        //Arreglo de estrellas
+
         const collection = db.collection('products');
         collection.find(filters).sort(sortings).toArray(function (err, docs) {
             assert.equal(err, null);
@@ -98,10 +99,29 @@ function configureRouts(app, db) {
 
     // ruta para la lista de productos con handlebars
     app.get('/producto/:name/:id', function (req, res) {
-        var id = parseInt(req.params.id);
-        var product = products[id];
+        if(req.params.id.length != 24){
+            res.redirect('/404');
+        }
+        const filter = {
+            _id: {
+                $eq: new ObjectId(req.params.id)
+            }
+        };
+        const collection = db.collection('products');
+
+        collection.find(filter).toArray(function (err, docs) {
+            assert.equal(err,null);
+            if(docs.length == 0){
+                res.redirect('/404');
+            }
+            var context = docs[0];
+            res.render('product', context);
+        });
         // renderizar vista
-        res.render('product', product);
+    });
+
+    app.get('/404',function (req,res){
+
     });
 
     app.get('/carrito', function (req, res) {
@@ -110,6 +130,14 @@ function configureRouts(app, db) {
         }
         // renderizar vista
         res.render('cart', context);
+    });
+    // Mostrar checkout
+    app.get('/checkout',function (req,res){
+        res.render('checkout', context);
+    });
+    // Recibir del usuario
+    app.post('/checkout',function (req,res){
+        res.render('checkout', context);
     });
 }
 

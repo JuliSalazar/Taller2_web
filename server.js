@@ -19,6 +19,8 @@ app.set('view engine', 'handlebars');
 // configurar carpeta public como estática o pública
 app.use(express.static('public'));
 
+app.use(express.urlencoded({ extended: true }));
+
 // Connection URL
 const url = 'mongodb://localhost:27017';
 

@@ -52,7 +52,7 @@
   <section class="store__products">
     {{#each products}}
     <div class="thumb">
-      <a href="/producto/{{ name }}/{{ @index }}" class="thumb__link">
+      <a href="/producto/{{ name }}/{{ _id }}" class="thumb__link">
         <img class="thumb__img" src="{{ img }}" alt="">
         <h4 class="thumb__name">{{ name }}</h4>
         <h4>${{price}}</h4>
