@@ -37,7 +37,7 @@ client.connect(function(err) {
 
   const db = client.db(dbName);
   configureRouts(app,db);
-  //Nuestras consultas
+  
   const collection = db.collection('products');
   
 

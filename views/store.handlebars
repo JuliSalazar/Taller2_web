@@ -5,48 +5,52 @@
   </div>
 </main>
 <section class="store">
-  <aside class="store__filters">
+  <aside id="store__filters" class="store__filters">
     <h2>Filtrar por</h2>
     <h3>Categoría</h3>
     <div class="info">
-    <a href="/tienda">Todos los productos</a>
-    <a href="/tienda/?category=agenda" class="{{#if isAgenda }}selected{{/if}}">Agendas</a>
-    <a href="/tienda/?category=calendario">Calendarios</a>
-    <a href="/tienda/?category=plannerSemanal">Planners Semanales</a>
-    <a href="/tienda/?category=plannerMensual">Planners Mensuales</a>
+      <a href="/tienda#store__filters" class="selected">Todos los productos</a>
+      <a href="/tienda/?category=agenda#store__filters" class="{{#if isAgenda }}selected{{/if}}">Agendas</a>
+      <a href="/tienda/?category=calendario" class="{{#if isCalendario }}selected{{/if}}"> Calendarios</a>
+      <a href="/tienda/?category=plannerSemanal" class="{{#if isSemanal }}selected{{/if}}">Planners Semanales</a>
+      <a href="/tienda/?category=plannerDiario" class="{{#if isDiario }}selected{{/if}}">Planners Diarios</a>
     </div>
     <h3>Precio</h3>
     <div class="info">
-    <a href="/tienda/?price1=1000&price2=5000"> 
-    <input type="checkbox" class="store__checkbok">$1.000 - $5.000
-    </a>
-    <a href="/tienda/?price1=15000&price2=20000"> <input type="checkbox" class="store__checkbok">$15.000 - $20.000</a>
-    <a href="/tienda/?price1=21000&price2=24000"> <input type="checkbox" class="store__checkbok">$21.000 - $24.000</a>
+      <a href="/tienda/?price1=1000&price2=5000">
+        <div class="checkbox"></div>$1.000 - $5.000
+      </a>
+      <a href="/tienda/?price1=15000&price2=20000">
+        <div class="checkbox"></div>$15.000 - $20.000
+      </a>
+      <a href="/tienda/?price1=21000&price2=24000">
+        <div class="checkbox"></div>$21.000 - $24.000
+      </a>
     </div>
     <h3>Color</h3>
     <div class="info">
-    <a href="/tienda">Todos los colores</a>
-    <a href="/tienda/?color=negro">Negro</a>
-    <a href="/tienda/?color=rojo">Rojo</a>
-    <a href="/tienda/?color=amarillo">Amarillo</a>
-    <a href="/tienda/?color=verde">Verde</a>
-    <a href="/tienda/?color=azul">Azul</a>
+      <a href="/tienda">Todos los colores</a>
+      <a href="/tienda/?color=negro">Negro</a>
+      <a href="/tienda/?color=rojo">Rojo</a>
+      <a href="/tienda/?color=amarillo">Amarillo</a>
+      <a href="/tienda/?color=verde">Verde</a>
+      <a href="/tienda/?color=azul">Azul</a>
     </div>
     <h2>Ordenar por</h2>
     <h3>Precio</h3>
     <div class="info">
-    <a href="/tienda/?priceOrd1=true">Menor a mayor</a>
-    <a href="/tienda/?priceOrd2=true">Mayor a menor</a>
+      <a href="/tienda/?priceOrd1=true">Menor a mayor</a>
+      <a href="/tienda/?priceOrd2=true">Mayor a menor</a>
     </div>
     <h3>Puntuación</h3>
     <div class="info">
-    <a href="/tienda/?starsOrd1=true">Menor a mayor</a>
-    <a href="/tienda/?starsOrd2=true">Mayor a menor</a>
+      <a href="/tienda/?starsOrd1=true">Menor a mayor</a>
+      <a href="/tienda/?starsOrd2=true">Mayor a menor</a>
     </div>
     <h3>Alfabeto</h3>
     <div class="info">
-    <a href="/tienda/?alfaOrd1=true">A-Z</a>
-    <a href="/tienda/?alfaOrd2=true">Z-A</a>
+      <a href="/tienda/?alfaOrd1=true">A-Z</a>
+      <a href="/tienda/?alfaOrd2=true">Z-A</a>
     </div>
   </aside>
   <section class="store__products">
@@ -59,7 +63,7 @@
         {{#each starsArray}}
         <img src="/src/images/Star1.png" alt="">
         {{/each}}
-        
+
       </a>
     </div>
     {{/each}}

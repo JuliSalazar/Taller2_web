@@ -97,7 +97,7 @@ const products = [
     color: 'amarillo',
     category: 'plannerSemanal',
     img: '/src/imgProducts/Planner1.jpg',
-    description: 'Calendario 2020 color amarillo de  17cm de ancho y 23 cm de alto, pasta dura y argollado',
+    description: 'Planeador semanal de color amarillo, medidas de 21,6cm de ancho por 27,94cm de alto',
     price: 1000,
     stars: 2
   },
@@ -106,7 +106,7 @@ const products = [
     color: 'negro',
     category: 'plannerSemanal',
     img: '/src/imgProducts/Planner2.jpg',
-    description: 'Calendario 2020 color negro de  17cm de ancho y 23 cm de alto, pasta dura y argollado',
+    description: 'Planeador semanal de color negro, medidas de 21,6cm de ancho por 27,94cm de alto',
     price: 1000,
     stars: 5
   },
@@ -115,7 +115,7 @@ const products = [
     color: 'azul',
     category: 'plannerSemanal',
     img: '/src/imgProducts/Planner3.jpg',
-    description: 'Calendario 2020 color azul de  17cm de ancho y 23 cm de alto, pasta dura y argollado',
+    description: 'Planeador semanal de color azul, medidas de 21,6cm de ancho por 27,94cm de alto',
     price: 1000,
     stars: 5
   },
@@ -124,7 +124,7 @@ const products = [
     color: 'verde',
     category: 'plannerSemanal',
     img: '/src/imgProducts/Planner4.jpg',
-    description: 'Calendario 2020 color verde de  17cm de ancho y 23 cm de alto, pasta dura y argollado',
+    description: 'Planeador semanal de color verde, medidas de 21,6cm de ancho por 27,94cm de alto',
     price: 1000,
     stars: 3
   },
@@ -133,12 +133,57 @@ const products = [
     color: 'rojo',
     category: 'plannerSemanal',
     img: '/src/imgProducts/Planner5.jpg',
-    description: 'Calendario 2020 color rojo de  17cm de ancho y 23 cm de alto, pasta dura y argollado',
+    description: 'Planeador semanal de color rojo, medidas de 21,6cm de ancho por 27,94cm de alto',
     price: 1000,
     stars: 5
   },
   
-  //Planner mensual
+  //Planner diario
+  {
+    name: 'Planner diario rojo' ,
+    color: 'rojo',
+    category: 'plannerDiario',
+    img: '/src/imgProducts/DayPlanner1.jpg',
+    description: 'Planeador diario de color rojo, medidas de 21,6cm de ancho por 27,94cm de alto',
+    price: 1000,
+    stars: 4
+  },
+  {
+    name: 'Planner diario verde' ,
+    color: 'verde',
+    category: 'plannerDiario',
+    img: '/src/imgProducts/DayPlanner2.jpg',
+    description: 'Planeador diario de color verde, medidas de 21,6cm de ancho por 27,94cm de alto',
+    price: 1000,
+    stars: 3
+  },
+  {
+    name: 'Planner diario azul' ,
+    color: 'azul',
+    category: 'plannerDiario',
+    img: '/src/imgProducts/DayPlanner3.jpg',
+    description: 'Planeador diario de color azul, medidas de 21,6cm de ancho por 27,94cm de alto',
+    price: 1000,
+    stars: 5
+  },
+  {
+    name: 'Planner diario negro' ,
+    color: 'negro',
+    category: 'plannerDiario',
+    img: '/src/imgProducts/DayPlanner4.jpg',
+    description: 'Planeador diario de color negro, medidas de 21,6cm de ancho por 27,94cm de alto',
+    price: 1000,
+    stars: 5
+  },
+  {
+    name: 'Planner diario amarillo' ,
+    color: 'amarillo',
+    category: 'plannerDiario',
+    img: '/src/imgProducts/DayPlanner5.jpg',
+    description: 'Planeador diario de color amarillo, medidas de 21,6cm de ancho por 27,94cm de alto',
+    price: 1000,
+    stars: 4
+  }
 ];
 
 module.exports = products;

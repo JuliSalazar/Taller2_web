@@ -89,6 +89,8 @@ function configureRouts(app, db) {
                 products: docs,
                 isAgenda: req.query.category === 'agenda',
                 isCalendario: req.query.category === 'calendario',
+                isSemanal: req.query.category === 'plannerSemanal',
+                isDiario: req.query.category === 'plannerDiario',
             }
             // renderizar vista
             res.render('store', context);
