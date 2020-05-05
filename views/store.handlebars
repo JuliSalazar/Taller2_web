@@ -17,40 +17,40 @@
     </div>
     <h3>Precio</h3>
     <div class="info">
-      <a href="/tienda/?price1=1000&price2=5000">
-        <div class="checkbox"></div>$1.000 - $5.000
+      <a href="/tienda/?price1=1000&price2=5000" class="{{#if isPrice1 }}selected{{/if}}">
+        <div class="checkbox {{#if isPrice1 }}checkbox--selected{{/if}}"></div>$1.000 - $5.000
       </a>
-      <a href="/tienda/?price1=15000&price2=20000">
-        <div class="checkbox"></div>$15.000 - $20.000
+      <a href="/tienda/?price1=15000&price2=20000" class="{{#if isPrice2 }}selected{{/if}}">
+        <div class="checkbox {{#if isPrice2 }}checkbox--selected{{/if}}"></div>$15.000 - $20.000
       </a>
-      <a href="/tienda/?price1=21000&price2=24000">
-        <div class="checkbox"></div>$21.000 - $24.000
+      <a href="/tienda/?price1=21000&price2=24000" class="{{#if isPrice3 }}selected{{/if}}">
+        <div class="checkbox {{#if isPrice3 }}checkbox--selected{{/if}}"></div>$21.000 - $24.000
       </a>
     </div>
     <h3>Color</h3>
     <div class="info">
       <a href="/tienda">Todos los colores</a>
-      <a href="/tienda/?color=negro">Negro</a>
-      <a href="/tienda/?color=rojo">Rojo</a>
-      <a href="/tienda/?color=amarillo">Amarillo</a>
-      <a href="/tienda/?color=verde">Verde</a>
-      <a href="/tienda/?color=azul">Azul</a>
+      <a href="/tienda/?color=negro" class="{{#if isNegro }}selected{{/if}}">Negro</a>
+      <a href="/tienda/?color=rojo" class="{{#if isRojo }}selected{{/if}}">Rojo</a>
+      <a href="/tienda/?color=amarillo" class="{{#if isAmarillo }}selected{{/if}}">Amarillo</a>
+      <a href="/tienda/?color=verde" class="{{#if isVerde }}selected{{/if}}">Verde</a>
+      <a href="/tienda/?color=azul" class="{{#if isAzul }}selected{{/if}}">Azul</a>
     </div>
     <h2>Ordenar por</h2>
     <h3>Precio</h3>
     <div class="info">
-      <a href="/tienda/?priceOrd1=true">Menor a mayor</a>
-      <a href="/tienda/?priceOrd2=true">Mayor a menor</a>
+      <a href="/tienda/?priceOrd1=true" class="{{#if isPriceOrd1 }}selected{{/if}}">Menor a mayor</a>
+      <a href="/tienda/?priceOrd2=true" class="{{#if isPriceOrd2 }}selected{{/if}}">Mayor a menor</a>
     </div>
     <h3>Puntuación</h3>
     <div class="info">
-      <a href="/tienda/?starsOrd1=true">Menor a mayor</a>
-      <a href="/tienda/?starsOrd2=true">Mayor a menor</a>
+      <a href="/tienda/?starsOrd1=true" class="{{#if isStarsOrd1 }}selected{{/if}}">Menor a mayor</a>
+      <a href="/tienda/?starsOrd2=true" class="{{#if isStarsOrd2 }}selected{{/if}}">Mayor a menor</a>
     </div>
     <h3>Alfabeto</h3>
     <div class="info">
-      <a href="/tienda/?alfaOrd1=true">A-Z</a>
-      <a href="/tienda/?alfaOrd2=true">Z-A</a>
+      <a href="/tienda/?alfaOrd1=true" class="{{#if isAlfaOrd1 }}selected{{/if}}">A-Z</a>
+      <a href="/tienda/?alfaOrd2=true" class="{{#if isAlfaOrd2 }}selected{{/if}}">Z-A</a>
     </div>
   </aside>
   <section class="store__products">

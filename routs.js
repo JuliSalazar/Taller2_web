@@ -87,10 +87,33 @@ function configureRouts(app, db) {
             // objeto contexto
             var context = {
                 products: docs,
+                //Filtro por categoría
                 isAgenda: req.query.category === 'agenda',
                 isCalendario: req.query.category === 'calendario',
                 isSemanal: req.query.category === 'plannerSemanal',
                 isDiario: req.query.category === 'plannerDiario',
+                //Filtro por precio
+                isPrice1: req.query.price1 === '1000' && req.query.price2 === '5000',
+                isPrice2: req.query.price1 === '15000' && req.query.price2 === '20000',
+                isPrice3: req.query.price1 === '21000' && req.query.price2 === '24000',
+                //Filtro por color
+                isNegro: req.query.color === 'negro',
+                isRojo: req.query.color === 'rojo',
+                isAmarillo: req.query.color === 'amarillo',
+                isVerde: req.query.color === 'verde',
+                isAzul: req.query.color === 'azul',
+
+                //Ordenamieto por precio
+                isPriceOrd1: req.query.priceOrd1,
+                isPriceOrd2: req.query.priceOrd2,
+                //Ordenamieto por puntuacion
+                isStarsOrd1: req.query.starsOrd1,
+                isStarsOrd2: req.query.starsOrd2,
+                //Ordenamiento por nombre
+                isAlfaOrd1: req.query.alfaOrd1,
+                isAlfaOrd2: req.query.alfaOrd2,
+
+             
             }
             // renderizar vista
             res.render('store', context);
@@ -103,6 +126,7 @@ function configureRouts(app, db) {
     app.get('/producto/:name/:id', function (req, res) {
         if(req.params.id.length != 24){
             res.redirect('/404');
+            return;
         }
         const filter = {
             _id: {
@@ -115,6 +139,7 @@ function configureRouts(app, db) {
             assert.equal(err,null);
             if(docs.length == 0){
                 res.redirect('/404');
+                return;
             }
             var context = docs[0];
             res.render('product', context);
@@ -135,11 +160,28 @@ function configureRouts(app, db) {
     });
     // Mostrar checkout
     app.get('/checkout',function (req,res){
+        var context = {
+            showError: req.query.error,
+        }
         res.render('checkout', context);
     });
-    // Recibir del usuario
+    // Recibir info del usuario
     app.post('/checkout',function (req,res){
-        res.render('checkout', context);
+        console.log(req.body);
+        // Leer varias variables que son requeridas
+        var { texto } = req.body;
+       // asignar una fecha
+       req.body.creation_date = new Date();
+
+        if(!texto){
+            //res.send('error');
+            res.redirect('/checkout?error=true');
+            return;
+        }
+        const collection = db.collection('orders');
+        collection.insertOne(req.body);
+        res.send('test');
+        //res.redirect();
     });
 }
 

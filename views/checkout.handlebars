@@ -1,2 +1,10 @@
 <h1>CHECKOUT</h1>
-<form action="/checkout" method="POST"></form>
+<form action="/checkout" method="POST">
+<h1>CHECKOUT</h1>
+
+{{#if showError}}
+<h1>ERROR</h1>
+{{/if}}
+<input type="text" name="texto">
+<button>send</button>
+</form>
