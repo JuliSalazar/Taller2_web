@@ -59,12 +59,18 @@
       <a href="/producto/{{ name }}/{{ _id }}" class="thumb__link">
         <img class="thumb__img" src="{{ img }}" alt="">
         <h4 class="thumb__name">{{ name }}</h4>
-        <h4>${{price}}</h4>
+        <h4 class="thumb__price">${{price}}</h4>
         {{#each starsArray}}
         <img src="/src/images/Star1.png" alt="">
         {{/each}}
-
       </a>
+        <button class="buttonAddToCart" 
+        data-id="{{ _id }}"
+        data-name="{{ name }}"
+        data-price="{{ price }}"
+        data-img="{{ img }}">
+          Añadir al carrito
+        </button>
     </div>
     {{/each}}
   </section>
