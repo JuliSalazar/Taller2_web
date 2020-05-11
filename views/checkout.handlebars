@@ -1,5 +1,5 @@
 <main class="cart">
-    <form action="/checkout" method="POST">
+    <form class="checkoutForm"  action="/checkout" method="POST">
     <a href="/tienda">
       <img class="arrow arrow--product" src="/src/icons/white-right-arrow.svg">Volver
     </a>
@@ -10,6 +10,6 @@
         {{/if}}
         <input type="name" name="name">
         <button>send</button>
+    <input class="checkoutForm__products" name="products" type="hidden">
     </form>
-
 </main>

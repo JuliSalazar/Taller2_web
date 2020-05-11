@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Rosario&display=swap");
 html, body {
   scroll-behavior: smooth;
+  min-height: 100hv;
 }
 
 * {

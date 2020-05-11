@@ -173,11 +173,14 @@ function configureRouts(app, db) {
        // asignar una fecha
        req.body.creation_date = new Date();
 
-        if(!texto){
+        if(!texto ){
             //res.send('error');
             res.redirect('/checkout?error=true');
             return;
         }
+
+        req.body.products = JSON.parse(parse.body.products);
+
         const collection = db.collection('orders');
         collection.insertOne(req.body);
         res.send('test');
