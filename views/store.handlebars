@@ -1,7 +1,7 @@
 <main class="banner banner--store">
   <div class="banner__info">
     <h2>Productos</h2>
-    <p>Descripción de la tienda</p>
+    <p>Como proyecto personal </p>
   </div>
 </main>
 <section class="store">
@@ -9,7 +9,7 @@
     <h2>Filtrar por</h2>
     <h3>Categoría</h3>
     <div class="info">
-      <a href="/tienda#store__filters" class="selected">Todos los productos</a>
+      <a href="/tienda#store__filters">Todos los productos</a>
       <a href="/tienda/?category=agenda#store__filters" class="{{#if isAgenda }}selected{{/if}}">Agendas</a>
       <a href="/tienda/?category=calendario" class="{{#if isCalendario }}selected{{/if}}"> Calendarios</a>
       <a href="/tienda/?category=plannerSemanal" class="{{#if isSemanal }}selected{{/if}}">Planners Semanales</a>
@@ -67,6 +67,7 @@
         <button class="buttonAddToCart" 
         data-id="{{ _id }}"
         data-name="{{ name }}"
+        data-desc="{{ description }}"
         data-price="{{ price }}"
         data-img="{{ img }}">
           Añadir al carrito

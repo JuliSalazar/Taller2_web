@@ -46,6 +46,22 @@
             display: inline-block;
             border-bottom: 0px;
         }
+        &--cart{
+            display: inline-flex;
+            align-items: center;
+            padding: 15px;
+            img{
+                margin-left: 11px;
+                
+            }
+            p{
+                position: absolute;
+                top: 14px;
+                right: 20px;
+                color: black;
+                font-size: 13px;
+            }
+        }
     }
     
     &__link:hover{
