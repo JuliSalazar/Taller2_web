@@ -1,7 +1,9 @@
 var btnsAddToCart = document.querySelectorAll('.buttonAddToCart');
 var cartNum = document.querySelector('.cart__num');
-var cartContainer = document.querySelector('.cart__container');
+var cartContainer = document.querySelector('.cart__products');
+var cartResume = document.querySelector('.cart__info');
 
+var cartBtnPay = document.querySelector('.cart__button');
 
 var cartList = [];
 
@@ -11,6 +13,10 @@ if (localStorage.getItem('cartList')) {
 if (cartContainer) {
     listCart();
 }
+if(cartResume){
+    listCart();
+}
+
 
 cartNum.innerText = cartList.length;
 
@@ -30,34 +36,36 @@ btnsAddToCart.forEach(function (elem) {
         });
         cartNum.innerText = cartList.length;
         localStorage.setItem('cartList', JSON.stringify(cartList));
-        listCart()
+        listCart();
     });
 });
+
+
 
 //Ver la lista del carrito
 function listCart() {
     var total = 0;
     cartContainer.innerHTML = '';
+    cartResume.innerHTML = '';
     cartList.forEach(function (obj, index) {
         var newItem = document.createElement('div');
         newItem.classList.add('cart__product');
         newItem.innerHTML = `
             <button class="cart__button"><img src="/src/images/delete.png"></button>
-            <img src=${ obj.img }> 
+            <img src=${ obj.img}> 
             <div class="cart__info">
                 <h4 class="cart__name">${obj.name}</h4>
-                <p>${ obj.desc }</p>
+                <p>${ obj.desc}</p>
                 <h4> $${ obj.price} </h4>
             </div> 
         `;
         var resumeItem = document.createElement('div');
-        resumeItem.classList.add('info');
-        resumeItem.innerHTML = `
-            <div class="cart__info">
+        resumeItem.classList.add('cart__text');
+        resumeItem.innerHTML = `   
                 <h4 class="cart__name">${obj.name}</h4>
-                <h4> $${ obj.price} </h4>
-            </div> 
+                <h4> $${ obj.price} </h4>   
         `;
+
         var btn = newItem.querySelector('button');
         btn.addEventListener('click', function () {
             cartList.splice(index, 1);
@@ -66,11 +74,17 @@ function listCart() {
             listCart();
         });
 
+      
         cartContainer.appendChild(newItem);
-        cartContainer.appendChild(resumeItem);
+        cartResume.appendChild(resumeItem);
+
         total += parseInt(obj.price);
     });
-    var totalElem = document.querySelector('.cart__total');
-    // totalElem.innerText = total;
+    var totalElem = document.querySelector('.totalPrice');
+     totalElem.innerText = "$"+ total + " COP";
 }
 cartNum.addEventListener('click', listCart);
+
+cartBtnPay.addEventListener('click', function(){
+    
+});

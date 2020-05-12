@@ -1,15 +1,37 @@
-<main class="cart">
-    <form class="checkoutForm"  action="/checkout" method="POST">
+<main class="checkout">
+  <form class="checkoutForm" action="/checkout" method="POST">
     <a href="/tienda">
-      <img class="arrow arrow--product" src="/src/icons/white-right-arrow.svg">Volver
+      <img class="arrow arrow--product" src="/src/icons/white-right-arrow.svg">Volver al carrito
     </a>
-        <h1>Realizar Pago</h1>
+    <h1>Realizar Pago</h1>
 
-        {{#if showError}}
-        <h1>ERROR</h1>
-        {{/if}}
-        <input type="name" name="name">
-        <button>send</button>
+    {{#if showError}}
+    <h1>ERROR</h1>
+    {{/if}}
+
+    <input type="name" name="name" placeholder="Nombre">
+    <input type="text" name="lastname" placeholder="Apellidos">
+    <input type="addres" name="direction" placeholder="Dirección">
+    <input type="id" name="document" placeholder="Cédula">
+    <select class="">
+      <option  disabled="true" selected="true">Método de pago</option>
+      <option value="pse">Pagos PSE</option>
+      <option value="masterCard">Master Card</option>
+      <option value="visa">Visa</option>
+    </select>
+
+    <button>Pagar</button>
     <input class="checkoutForm__products" name="products" type="hidden">
-    </form>
+  </form>
+   <div class="cart__resume">
+            <h1>Resumen</h1>
+            <div class="cart__info cart__info--resume">
+
+            </div>
+            <div class="cart__total">
+                <h1>Total</h1>
+                <h1 class="totalPrice"></h1>
+            </div>
+           
+        </div>
 </main>
