@@ -1,7 +1,7 @@
 var btnsAddToCart = document.querySelectorAll('.buttonAddToCart');
 var cartNum = document.querySelector('.cart__num');
 var cartContainer = document.querySelector('.cart__products');
-var cartResume = document.querySelector('.cart__info');
+var cartResume = document.querySelector('.resume__info');
 
 var cartBtnPay = document.querySelector('.cart__button');
 
@@ -60,9 +60,9 @@ function listCart() {
             </div> 
         `;
         var resumeItem = document.createElement('div');
-        resumeItem.classList.add('cart__text');
+        resumeItem.classList.add('resume__text');
         resumeItem.innerHTML = `   
-                <h4 class="cart__name">${obj.name}</h4>
+                <h4 class="resume__name">${obj.name}</h4>
                 <h4> $${ obj.price} </h4>   
         `;
 

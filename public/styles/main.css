@@ -1115,62 +1115,6 @@ a {
   width: 60%;
 }
 
-.cart__resume {
-  padding: 20px;
-  background: rgba(20, 20, 20, 0.8);
-  width: 442px;
-  height: 452px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.cart__resume h1 {
-  font-size: 24px;
-  margin-left: 10px;
-}
-
-.cart__resume button {
-  width: 200px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding: 15px;
-}
-
-.cart__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.cart__total {
-  width: 90%;
-  border-top: 1px solid #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.cart__total .totalPrice {
-  margin-right: 10px;
-}
-
 .cart__button {
   font-size: 30px;
   background: none;
@@ -1211,11 +1155,95 @@ a {
   font-weight: bold;
 }
 
-.checkout {
-  padding-top: 100px;
+.resume {
+  padding: 20px;
   background: rgba(20, 20, 20, 0.8);
-  height: 869px;
+  width: 442px;
+  height: 452px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.resume h1 {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.resume button {
+  width: 200px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 15px;
+}
+
+.resume__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.resume__info {
+  width: 90%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.resume__info--resume {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.resume__total {
+  width: 90%;
+  border-top: 1px solid #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.resume__total .totalPrice {
+  margin-right: 10px;
+}
+
+.checkout {
+  padding: 100px 50px;
+  background: rgba(20, 20, 20, 0.8);
   color: white;
+  position: relative;
+}
+
+.checkout__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .checkout h1 {
@@ -1233,5 +1261,45 @@ a {
 .checkout input, .checkout select {
   color: #787878;
   padding: 10px;
+}
+
+.checkout__form {
+  width: 60%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.checkout__form button {
+  width: 200px;
+  padding: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.formColum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.formColum input, .formColum select {
+  width: 48%;
+  font-size: 15px;
+}
+
+input, select {
+  font-size: 15px;
 }
 /*# sourceMappingURL=main.css.map */

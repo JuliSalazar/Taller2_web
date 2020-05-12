@@ -122,7 +122,7 @@ function configureRouts(app, db) {
 
     });
 
-    // ruta para la lista de productos con handlebars
+    // ruta para el producto con handlebars
     app.get('/producto/:name/:id', function (req, res) {
         if(req.params.id.length != 24){
             res.redirect('/404');

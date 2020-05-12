@@ -1,0 +1,42 @@
+.resume{
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.8);
+    width: 442px;
+    height: 452px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h1{
+        font-size: 24px;
+        margin-left: 10px;
+    }
+    button{
+        width: 200px;
+        align-self: center;
+        padding: 15px;
+    }
+    &__text{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info{
+        width: 90%;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        &--resume{
+            align-self: center;
+        }
+    }
+    &__total{
+        width: 90%;
+        border-top:  1px solid #ffffff;
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        .totalPrice{
+            margin-right: 10px;
+        }
+    }
+}
