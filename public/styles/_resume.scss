@@ -2,13 +2,18 @@
     padding: 20px;
     background: rgba(20, 20, 20, 0.8);
     width: 442px;
-    height: 452px;
+    min-height: 400px;
+    max-height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 50px;
     h1{
         font-size: 24px;
         margin-left: 10px;
+    }
+    a{
+        align-self: center;
     }
     button{
         width: 200px;
@@ -21,7 +26,6 @@
     }
     &__info{
         width: 90%;
-        height: 150px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;

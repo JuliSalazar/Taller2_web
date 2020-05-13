@@ -15,7 +15,29 @@ function handleWindowResize () {
 }
 window.addEventListener('resize', handleWindowResize);
 
+//Javascript para el funcionamiento de boton de filtros
+var menuFilter = document.querySelector('.filtersMobile');
+var btnFilter = document.querySelector('.store__btnFilter');
 
+var handleFilterClick = function () {
+    menuFilter.classList.toggle('filtersMobile--active');
+}
+if(btnFilter){btnFilter.addEventListener('click', handleFilterClick);}
+
+//Javascript para el funcionamiento de boton de orders
+var menuOrder = document.querySelector('.ordersMobile');
+var btnOrder = document.querySelector('.store__btnOrder');
+var handleOrderClick = function () {
+    menuOrder.classList.toggle('ordersMobile--active');
+}
+if(btnOrder)btnOrder.addEventListener('click', handleOrderClick);
+
+//Javascript para el funcionamiento de boton cerrar del menu de filtros mobile
+var btnCloseFilters = document.querySelector('.closeMenuFilters');
+if(btnCloseFilters)btnCloseFilters.addEventListener('click', handleFilterClick);
+
+var btnCloseOrders = document.querySelector('.closeMenuOrders');
+if(btnCloseOrders)btnCloseOrders.addEventListener('click', handleOrderClick);
 
 //Javascript para el funcionamiento del slider de galería de imagenes
 

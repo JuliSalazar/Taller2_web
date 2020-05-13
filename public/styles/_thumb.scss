@@ -6,6 +6,12 @@
     justify-content: center;
     align-content: center;
     padding: 5px 10px;
+    @media (max-width: $breakpoint-web){
+        width: 170px;
+        padding: 5px 5px;
+        margin: 5px;
+        
+    }
     a{
         text-decoration: none;
         color: black;
@@ -14,14 +20,21 @@
         object-fit: cover;
         width: 321px;
         height: 328px;
+        @media (max-width: $breakpoint-web){
+            width: 170px;
+            height: 174px;
+        }
     }
     &__name{
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         font-size: 20px;
+        @media (max-width: $breakpoint-web){
+          font-size: 15px;
+        }
     }
     &__price{
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         font-size: 16px;
     }
 
@@ -32,6 +45,16 @@
         top: 355px;
         right: 25px;
         display: none;
+        @media (max-width: $breakpoint-web){
+            display: block;
+            position: absolute;
+            top: 220px;
+            right: 5px;
+            margin: 3px;
+            padding: 5px;
+            font-size: 8px;
+            width: 90px;
+        }
     }
 }
 .thumb:hover{

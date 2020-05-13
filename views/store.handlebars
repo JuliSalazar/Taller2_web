@@ -53,6 +53,70 @@
       <a href="/tienda/?alfaOrd2=true" class="{{#if isAlfaOrd2 }}selected{{/if}}">Z-A</a>
     </div>
   </aside>
+  <div class="store__filters store__filters--mobile">
+    <button class="store__btnFilter">Filtrar por</button>
+    <button class="store__btnOrder">Ordernar por</button>
+    <nav class="ordersMobile">
+      <div class="filtersMobile__topInfo">
+        <h2>Ordenar por</h2>
+        <img class="closeMenuOrders" src="/src/images/delete.png" alt="">
+      </div>
+      <div class="filtersMobile__bodyInfo">
+        <h3 class="filtersMobile__name">Precio</h3>
+        <div class="filtersMobile__info">
+          <a href="/tienda/?priceOrd1=true" class="{{#if isPriceOrd1 }}selected{{/if}}">Menor a mayor</a>
+          <a href="/tienda/?priceOrd2=true" class="{{#if isPriceOrd2 }}selected{{/if}}">Mayor a menor</a>
+        </div>
+        <h3 class="filtersMobile__name">Puntuación</h3>
+        <div class="filtersMobile__info">
+          <a href="/tienda/?starsOrd1=true" class="{{#if isStarsOrd1 }}selected{{/if}}">Menor a mayor</a>
+          <a href="/tienda/?starsOrd2=true" class="{{#if isStarsOrd2 }}selected{{/if}}">Mayor a menor</a>
+        </div>
+        <h3 class="filtersMobile__name">Alfabeto</h3>
+        <div class="filtersMobile__info">
+          <a href="/tienda/?alfaOrd1=true" class="{{#if isAlfaOrd1 }}selected{{/if}}">A-Z</a>
+          <a href="/tienda/?alfaOrd2=true" class="{{#if isAlfaOrd2 }}selected{{/if}}">Z-A</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <nav class="filtersMobile">
+      <div class="filtersMobile__topInfo">
+        <h2>Filtrar por</h2>
+        <img class="closeMenuFilters" src="/src/images/delete.png" alt="">
+      </div>
+      <div class="filtersMobile__bodyInfo">
+        <h3 class="filtersMobile__name">Categoría</h3>
+        <div class="filtersMobile__info">
+          <a href="/tienda#store__filters">Todos los productos</a>
+          <a href="/tienda/?category=agenda#store__filters" class="{{#if isAgenda }}selected{{/if}}">Agendas</a>
+          <a href="/tienda/?category=calendario" class="{{#if isCalendario }}selected{{/if}}"> Calendarios</a>
+          <a href="/tienda/?category=plannerSemanal" class="{{#if isSemanal }}selected{{/if}}">Planners Semanales</a>
+          <a href="/tienda/?category=plannerDiario" class="{{#if isDiario }}selected{{/if}}">Planners Diarios</a>
+        </div>
+        <h3 class="filtersMobile__name">Precio</h3>
+        <div class="filtersMobile__info">
+          <a href="/tienda/?price1=1000&price2=5000" class="{{#if isPrice1 }}selected{{/if}}">$1.000 - $5.000</a>
+          <a href="/tienda/?price1=15000&price2=20000" class="{{#if isPrice2 }}selected{{/if}}">$15.000 - $20.000</a>
+          <a href="/tienda/?price1=21000&price2=24000" class="{{#if isPrice3 }}selected{{/if}}">$21.000 - $24.000</a>
+        </div>
+        <h3 class="filtersMobile__name">Color</h3>
+        <div class="filtersMobile__info">
+          <a href="/tienda">Todos los colores</a>
+          <a href="/tienda/?color=negro" class="{{#if isNegro }}selected{{/if}}">Negro</a>
+          <a href="/tienda/?color=rojo" class="{{#if isRojo }}selected{{/if}}">Rojo</a>
+          <a href="/tienda/?color=amarillo" class="{{#if isAmarillo }}selected{{/if}}">Amarillo</a>
+          <a href="/tienda/?color=verde" class="{{#if isVerde }}selected{{/if}}">Verde</a>
+          <a href="/tienda/?color=azul" class="{{#if isAzul }}selected{{/if}}">Azul</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+
+
   <section class="store__products">
     {{#each products}}
     <div class="thumb">
@@ -64,14 +128,10 @@
         <img src="/src/images/Star1.png" alt="">
         {{/each}}
       </a>
-        <button class="buttonAddToCart" 
-        data-id="{{ _id }}"
-        data-name="{{ name }}"
-        data-desc="{{ description }}"
-        data-price="{{ price }}"
-        data-img="{{ img }}">
-          Añadir al carrito
-        </button>
+      <button class="buttonAddToCart" data-id="{{ _id }}" data-name="{{ name }}" data-desc="{{ description }}"
+        data-price="{{ price }}" data-img="{{ img }}">
+        Añadir al carrito
+      </button>
     </div>
     {{/each}}
   </section>

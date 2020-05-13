@@ -853,9 +853,24 @@ a {
   margin-top: 40px;
 }
 
+@media (max-width: 1024px) {
+  .store {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .store__filters {
   width: 30%;
   margin-right: 30px;
+}
+
+@media (max-width: 1024px) {
+  .store__filters {
+    display: none;
+  }
 }
 
 .store__filters h2 {
@@ -870,6 +885,28 @@ a {
   background-color: #EFEFEF;
 }
 
+.store__filters--mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .store__filters--mobile {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .store__filters--mobile button {
+    margin: 2px;
+    width: 175px;
+    border: 1px solid #C6C6C6;
+  }
+}
+
 .store__products {
   width: 70%;
   display: -webkit-box;
@@ -878,6 +915,83 @@ a {
   position: relative;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (max-width: 1024px) {
+  .store__products {
+    width: 100%;
+  }
+}
+
+.filtersMobile, .ordersMobile {
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 24, 24, 0.9);
+  color: white;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.filtersMobile--active, .ordersMobile--active {
+  display: inline;
+}
+
+.filtersMobile__info, .ordersMobile__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.filtersMobile__info a, .ordersMobile__info a {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.filtersMobile__topInfo, .ordersMobile__topInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 15px 10px 0px;
+}
+
+.filtersMobile__topInfo img, .ordersMobile__topInfo img {
+  width: 30px;
+  height: 30px;
+}
+
+.filtersMobile__bodyInfo, .ordersMobile__bodyInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.filtersMobile h3, .ordersMobile h3 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  background: none;
 }
 
 .info {
@@ -931,6 +1045,14 @@ a {
   padding: 5px 10px;
 }
 
+@media (max-width: 1024px) {
+  .thumb {
+    width: 170px;
+    padding: 5px 5px;
+    margin: 5px;
+  }
+}
+
 .thumb a {
   text-decoration: none;
   color: black;
@@ -943,14 +1065,27 @@ a {
   height: 328px;
 }
 
+@media (max-width: 1024px) {
+  .thumb__img {
+    width: 170px;
+    height: 174px;
+  }
+}
+
 .thumb__name {
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 20px;
 }
 
+@media (max-width: 1024px) {
+  .thumb__name {
+    font-size: 15px;
+  }
+}
+
 .thumb__price {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 16px;
 }
 
@@ -961,6 +1096,19 @@ a {
   top: 355px;
   right: 25px;
   display: none;
+}
+
+@media (max-width: 1024px) {
+  .thumb button {
+    display: block;
+    position: absolute;
+    top: 220px;
+    right: 5px;
+    margin: 3px;
+    padding: 5px;
+    font-size: 8px;
+    width: 90px;
+  }
 }
 
 .thumb:hover {
@@ -1159,7 +1307,8 @@ a {
   padding: 20px;
   background: rgba(20, 20, 20, 0.8);
   width: 442px;
-  height: 452px;
+  min-height: 400px;
+  max-height: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1170,11 +1319,18 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .resume h1 {
   font-size: 24px;
   margin-left: 10px;
+}
+
+.resume a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .resume button {
@@ -1196,7 +1352,6 @@ a {
 
 .resume__info {
   width: 90%;
-  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

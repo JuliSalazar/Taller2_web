@@ -169,23 +169,25 @@ function configureRouts(app, db) {
     app.post('/checkout',function (req,res){
         console.log(req.body);
         // Leer varias variables que son requeridas
-        var { texto } = req.body;
+        var { name, lastname, address, document, payMethod, products } = req.body;
        // asignar una fecha
        req.body.creation_date = new Date();
+       if(!name ||!lastname || !address || !document || !payMethod || !products){
+        //res.send('error');
+        res.redirect('/checkout?error=true');
+        return;
+      }
 
-        if(!texto ){
-            //res.send('error');
-            res.redirect('/checkout?error=true');
-            return;
-        }
-
-        req.body.products = JSON.parse(parse.body.products);
+        req.body.products = JSON.parse(req.body.products);
 
         const collection = db.collection('orders');
         collection.insertOne(req.body);
-        res.send('test');
-        //res.redirect();
+        //res.send('test');
+        res.redirect('confirmation');
     });
+    app.get('/confirmation', function(req, res) {
+        res.send('gracias por tu compra');
+      });
 }
 
 module.exports = configureRouts;
