@@ -1,14 +1,17 @@
 <main class="banner banner--product" style="background-image: url('{{img}}');">
+
+</main>
   <div class="product">
     <a href="/tienda">
       <img class="arrow arrow--product" src="/src/icons/white-right-arrow.svg">Volver
     </a>
-    {{#each starsArray}}
-      <img src="/src/images/WhiteStar.png" alt="">
-    {{/each}}
+    
     <h1>{{ name }}</h1>
     <h4>{{ description }}</h4>
     <h2>${{price}}</h2>
+    {{#each starsArray}}
+        <img src="/src/images/WhiteStar.png" alt="">
+    {{/each}}
     <div class="units">
       <h4>Unidades:</h4> <input class="inputNum" type="number" value="1" min="1" max="10">
       <button class="buttonAddToCart" data-id="{{ _id }}"
@@ -18,8 +21,4 @@
        data-img="{{ img }}"
        >Añadir al carrito</button>
     </div>
-
-
   </div>
-
-</main>

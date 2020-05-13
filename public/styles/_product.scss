@@ -7,25 +7,54 @@
     top: 30%;
     color: white;
     padding: 20px 30px 20px 40px;
+    @media (max-width: $breakpoint-web){
+        background: none;
+        position: relative;
+        color: black;
+        width: 100%;
+        height: 100%;
+    }
     a{
         display: block;
         color: white;
         margin-bottom: 20px;
         margin-left: -27px;
         font-size: 20px;
+        
+        @media (max-width: $breakpoint-web){
+            display: none;
+        }
+        
     }
     h1{
         margin: 10px 0px;
         text-align: left;
+        @media (max-width: $breakpoint-web){
+            font-size: 20px;
+        }
+    }
+    h2{
+        @media (max-width: $breakpoint-web){
+            font-size: 20px;
+            font-weight: normal;
+    }
     }
     h4,h2{
         margin: 20px 0px;
         text-align: left;
+        
     }
     h4{
         width: 80%;
     }
+    button{
+        @media (max-width: $breakpoint-web){
+            background: #EFEFEF;
+            align-self: center;
+        }
+    }
 }
+
 .inputNum{
     border: none;
     outline: none;
@@ -34,20 +63,33 @@
     border-bottom: 1px solid white;
     color: white;
     font-size: 20px;
+    @media (max-width: $breakpoint-web){
+        color: black;
+        border-bottom: 1px solid black;
+    }
 }
 .units{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    h4{
-        display: contents;
+    @media (max-width: $breakpoint-web){
+        justify-content: center;
+    }
+    
+    h4:nth-child(n){
+        @media (max-width: $breakpoint-web){
+            display: none;
+        }
     }
 }
 .nice-number {
     margin-left: -180px;
     display: inline-flex;
     justify-content: stretch;
+    @media (max-width: $breakpoint-web){
+        display: none;
+    }
     input {
       vertical-align: middle;
       -moz-appearance: textfield;
@@ -67,6 +109,9 @@
         border: none;
         padding: 5px;
         outline: none;
+        @media (max-width: $breakpoint-web){
+            color: black;
+        }
     }
   }
   

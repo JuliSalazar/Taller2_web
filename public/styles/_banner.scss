@@ -11,6 +11,9 @@
     }
     &--product{
         height: 800px;
+        @media (max-width: $breakpoint-web){
+            height: 450px;
+        }
     }
    
 }
