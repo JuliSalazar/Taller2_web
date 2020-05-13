@@ -183,7 +183,7 @@ function configureRouts(app, db) {
         const collection = db.collection('orders');
         collection.insertOne(req.body);
         //res.send('test');
-        res.redirect('confirmation');
+        res.redirect('tienda');
     });
     app.get('/confirmation', function(req, res) {
         res.send('gracias por tu compra');

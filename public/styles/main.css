@@ -1458,6 +1458,7 @@ a {
   .resume {
     width: 100%;
     min-height: 100px;
+    margin-bottom: 0px;
   }
 }
 
@@ -1550,7 +1551,7 @@ a {
 
 @media (max-width: 1024px) {
   .checkout {
-    padding: 100px 0px;
+    padding: 100px 0px 0px 0px;
   }
 }
 

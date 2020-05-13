@@ -6,6 +6,7 @@ function onLoad(){
         var input = document.querySelector('.checkoutForm__products');
         input.value = localStorage.getItem('cartList');
         localStorage.removeItem('cartList');
+        window.alert("¡Gracias por tu compra!");
     });
  
 }
