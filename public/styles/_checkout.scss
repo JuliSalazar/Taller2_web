@@ -3,20 +3,33 @@
     background: rgba(20, 20, 20, 0.8);
     color: white;
     position: relative;
+    @media (max-width: $breakpoint-web){
+        padding: 100px 0px;
+    }
 
     &__container{
         display: flex;
         justify-content: space-around;
+        @media (max-width: $breakpoint-web){
+            flex-direction: column;
+        }
     }
     h1{
         text-align: left;
         margin: 20px 40px;
+        @media (max-width: $breakpoint-web){
+            margin: 5px 15px;
+            font-size: 20px;
+        }
     }
     a{
         display: block;
         color: white;
         margin-bottom: 20px;
         font-size: 20px;
+        @media (max-width: $breakpoint-web){
+            font-size: 15px;
+        }
     }
     input,select{
         color: #787878;
@@ -33,6 +46,9 @@
             padding: 15px;
             align-self: center;
         }
+        @media (max-width: $breakpoint-web){
+            width: 100%;
+        }
     }
 
 }
@@ -42,8 +58,18 @@
     input,select{
         width: 48%;
         font-size: 15px;
+        @media (max-width: $breakpoint-web){
+            width: 100%; 
+            margin: 5px 0px 5px 0px;  
+        }
+    }
+    @media (max-width: $breakpoint-web){
+        display: block;  
     }
 }
 input,select{
     font-size: 15px;
+    @media (max-width: $breakpoint-web){
+        margin: 5px 0px ;  
+    }
 }

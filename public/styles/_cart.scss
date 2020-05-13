@@ -6,10 +6,20 @@
     h1{
         text-align: left;
         margin: 20px 40px;
+        
+        @media (max-width: $breakpoint-web){
+            margin: 5px 20px;
+            font-size: 20px;
+        }
+        
     }
+    
     &__container{
         display: flex;
         justify-content: space-around;
+        @media (max-width: $breakpoint-web){
+            flex-direction: column;
+        }
     }
 
     &__product{
@@ -17,15 +27,32 @@
         flex-direction: row;
         align-items: center;
         border-bottom:  1px solid #ffffff;
+        
         img{
             width: 150px;
             height: 150px;
             object-fit: cover;
             margin: 40px;
+            @media (max-width: $breakpoint-web){
+                width: 70px;
+                height: 65px;
+                margin: 5px 10px 5px 5px;
+            }
+        }
+        @media (max-width: $breakpoint-web){
+            padding: 10px;
+            p:nth-child(n){
+                display: none;
+            }
         }
     }
+           
     &__products{
         width: 60%;
+        @media (max-width: $breakpoint-web){
+            width: 100%;
+            
+        }
     }
     
     
@@ -40,7 +67,18 @@
         height: 25px;
            object-fit: cover;
            margin: 0px;
-       }
+           
+           @media (max-width: $breakpoint-web){
+            width: 18px;
+            height: 18px;
+            }
+        }
+        @media (max-width: $breakpoint-web){
+            margin-left: 10px;
+        }
+    }
+    &__total{
+        
     }
     &__info{
         width: 90%;
@@ -50,6 +88,10 @@
         justify-content: space-around;
         &--resume{
             align-self: center;
+        }
+        @media (max-width: $breakpoint-web){
+            height: 80px;
+            font-size: 14px;
         }
     }
     h4{

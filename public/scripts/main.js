@@ -15,6 +15,21 @@ function handleWindowResize () {
 }
 window.addEventListener('resize', handleWindowResize);
 
+var h1resume = document.querySelector('.h1');
+if(window.innerWidth < 400){
+   if(h1resume) h1resume.classList.add('h1--mobile');
+}else{
+    if(h1resume) h1resume.classList.remove('h1--mobile');
+}
+function handleWindowResizea () {
+    if(window.innerWidth < 400){
+        if(h1resume) h1resume.classList.add('h1--mobile');
+    }else{
+        if(h1resume) h1resume.classList.remove('h1--mobile');
+    }
+}
+window.addEventListener('resize', handleWindowResizea);
+
 //Javascript para el funcionamiento de boton de filtros
 var menuFilter = document.querySelector('.filtersMobile');
 var btnFilter = document.querySelector('.store__btnFilter');

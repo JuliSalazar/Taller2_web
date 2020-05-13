@@ -8,10 +8,14 @@
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 50px;
+    @media (max-width: $breakpoint-web){
+        width: 100%;
+        min-height: 100px;
+    }
     h1{
         font-size: 24px;
-        margin-left: 10px;
-    }
+        margin-left: 10px;  
+    } 
     a{
         align-self: center;
     }
@@ -32,6 +36,9 @@
         &--resume{
             align-self: center;
         }
+        @media (max-width: $breakpoint-web){
+            display: none;
+        }
     }
     &__total{
         width: 90%;
@@ -42,5 +49,14 @@
         .totalPrice{
             margin-right: 10px;
         }
+        @media (max-width: $breakpoint-web){
+            border-top:  none;
+        }
     }
 }
+.h1{
+    &--mobile{
+        display: none;
+    }
+}
+
